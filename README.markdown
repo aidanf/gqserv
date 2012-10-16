@@ -4,6 +4,7 @@
 
 This code was written back when I was a postgrad student in UCD. 
 Our research group was doing research into the link structure of the web and we were scraping results from Google (Google didn't have any apis at this stage). It wasn't long before Google banned our ip addresses. Our supervisor got in touch with them and they agreed to let us scrape the google search results under the following conditions:
+
 1. It all came from a single specified ip address
 2. It took place during specified off-peak times
 3. It was throttled to a specific rate
@@ -117,33 +118,19 @@ Here is a sample gqclient session:
 
 ```
 [aidan@smi gqserv]$ ./gqclient.py
-
 Host: 127.0.0.1
-
 port: 8081 
-
 Send: asdas asda 
-
 Returned: 0 UNKNOWN COMMAND:asdas
-
 Send: queue_stat 
-
 Returned: 0 items in queue 
-
 Send: add_query hello world 
-
 Returned: 1 ADDED: hello_world_ 
-
 Send: add_query the hellacopters param: num=50 
-
 Returned: 1 ADDED: the_hellacopters_param:_num=50_ 
-
 Send: retrieve_query hello world 
-
 Returned: 0 QUERY NOT IN CACHE hello_world_ 
-
 Send: queue_contents 
-
 Returned: ['hello_world_', 'the_hellacopters_param:_num=50_']
 ```
 
